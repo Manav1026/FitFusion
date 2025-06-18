@@ -18,14 +18,11 @@ const Home = ({ setSelectedPage }: Props) => {
 
   return (
     <section id="home" className="gap-16 bg-gray-20 py-10 md:h-full md:pb-0">
-      {/* IMAGE AND MAIN HEADER */}
       <motion.div
         className="mx-auto w-5/6 items-center justify-center md:flex md:h-5/6"
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
-        {/* MAIN HEADER */}
         <div className="z-10 mt-32 md:basis-3/5">
-          {/* HEADINGS */}
           <motion.div
             className="md:-mt-20"
             initial="hidden"
@@ -38,11 +35,11 @@ const Home = ({ setSelectedPage }: Props) => {
             }}
           >
             <div className="relative">
-              <div className="relative before:absolute before:-top-20 before:-left-20 before:z-[-1] md:before:content-evolvetext">
+              <div className="relative w-full before:absolute before:top-[-70px] before:left-1/2 before:-translate-x-1/2 before:text-[6rem] before:font-extrabold before:text-primary-100 before:opacity-10 before:content-evolvetext md:before:text-[9rem]">
                 <img
                   alt="home-page-text"
                   src={HomePageText}
-                  className="lg:w-[520px] w-[300px] object-contain md:w-[450px]"
+                  className="lg:w-[480px] mx-auto mb-4 w-[240px] object-contain md:mx-0 md:w-[420px]"
                 />
               </div>
             </div>
@@ -54,7 +51,6 @@ const Home = ({ setSelectedPage }: Props) => {
             </p>
           </motion.div>
 
-          {/* ACTIONS */}
           <motion.div
             className="mt-8 flex items-center gap-8"
             initial="hidden"
@@ -79,7 +75,6 @@ const Home = ({ setSelectedPage }: Props) => {
           </motion.div>
         </div>
 
-        {/* IMAGE */}
         <div
           className="flex basis-3/5 justify-center md:z-10
               md:ml-40 md:mt-16 md:justify-items-end"
@@ -88,7 +83,6 @@ const Home = ({ setSelectedPage }: Props) => {
         </div>
       </motion.div>
 
-      {/* SPONSORS */}
       {isAboveMediumScreens && (
         <div className="h-[150px] w-full bg-primary-100 py-10">
           <div className="mx-auto w-5/6">
